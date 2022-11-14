@@ -16,4 +16,4 @@ float voltage = analogpin * (5.0/1023.0);
   //10bit=4.888 milli volt
 Serial.println (voltage);
 delay(2000);
-
+}
