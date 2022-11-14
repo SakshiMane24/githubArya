@@ -1,0 +1,19 @@
+void setup() {
+  // put your setup code here, to run once:
+//To print 5v 
+Serial.begin(9600);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+int analogpin = analogRead (A0);
+//to read anoalog where we fix the pin 
+float voltage = analogpin * (5.0/1023.0);
+//the reason we choose 1023 bcoz analog digital count is 10bit
+  //in binary 2^10 = 1024 but count is start from 0 hence subtract 1 
+  //the 5 v is designed to 1023
+  //10bit=4.888 milli volt
+Serial.println (voltage);
+delay(2000);
+
